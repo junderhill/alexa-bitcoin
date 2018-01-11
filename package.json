@@ -1,0 +1,15 @@
+{
+  "name": "alexa-bitcoin",
+  "version": "1.0.0",
+  "description": "Alexa skill to report the current bitcoin price",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jason Underhill",
+  "license": "ISC",
+  "dependencies": {
+    "alexa-sdk": "^1.0.25",
+    "https": "^1.0.0"
+  }
+}
