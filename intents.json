@@ -1,0 +1,31 @@
+{
+    "languageModel": {
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "CurrentPrice",
+          "samples": [
+            "What's the current price",
+            "Current price",
+            "Current Value",
+            "Bitcoin Price",
+            "How much is bitcoin worth",
+            "What's my bitcoin at"
+          ],
+          "slots": []
+        }
+      ],
+      "invocationName": "bitcoin"
+    }
+  }
