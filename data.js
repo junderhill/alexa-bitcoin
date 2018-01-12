@@ -3,7 +3,6 @@ var https = require('https');
 const url = "https://api.coindesk.com/v1/bpi/currentprice.json";
 
 exports.getCurrentPrice = function(callback){
-    console.log("getCurrentPrice()");
     var currentPrice = "";
     var prices = {};
     https.get(url, (response) => {
@@ -12,11 +11,9 @@ exports.getCurrentPrice = function(callback){
             data += chunk;
         });
         response.on('end', () => {
-            console.log("Data: " + data);
             var parsed = JSON.parse(data);
             prices.usd = this.roundAndFormatRate(parsed.bpi.USD.rate_float);
             prices.gbp = this.roundAndFormatRate(parsed.bpi.GBP.rate_float);
-
             callback(prices);
         });
     })
