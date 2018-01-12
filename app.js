@@ -24,7 +24,7 @@ var handlers = {
         var self = this;
         var callback = function(prices){
             var speechOutput = "";
-            speechOutput += "Bitcoin is currently " + prices.usd + " U.S dollars or " + prices.gbp + " British pounds.";
+            speechOutput += "Bitcoin is currently " + prices.usd + " or " + prices.gbp;
             self.emit(':tell', speechOutput);
         };
         var prices = data.getCurrentPrice(callback);
