@@ -21,10 +21,11 @@ var handlers = {
     },
 
     "CurrentPrice": function(){
+        var self = this;
         var callback = function(prices){
             var speechOutput = "";
             speechOutput += "Bitcoin is currently " + prices.usd + " U.S dollars or " + prices.gbp + " British pounds.";
-            this.emit(':tell', speechOutput);
+            self.emit(':tell', speechOutput);
         };
         var prices = data.getCurrentPrice(callback);
     }

@@ -4,12 +4,17 @@
   "description": "Alexa skill to report the current bitcoin price",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha tests --recursive"
   },
   "author": "Jason Underhill",
   "license": "ISC",
   "dependencies": {
     "alexa-sdk": "^1.0.25",
     "https": "^1.0.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^4.1.0",
+    "mocha-runner": "^1.1.2"
   }
 }

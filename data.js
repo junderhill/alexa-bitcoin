@@ -14,13 +14,8 @@ exports.getCurrentPrice = function(callback){
         response.on('end', () => {
             console.log("Data: " + data);
             var parsed = JSON.parse(data);
-            console.log("Parsed: " + parsed);
-            console.log(data);
-            console.log(data['bpi']['USD']);
-            console.log(data.chartName);
-            console.log(data.bpi.USD);
-            prices.usd = data.bpi.USD.rate;
-            prices.gbp = data.bpi.GBP.rate;
+            prices.usd = this.roundAndFormatRate(parsed.bpi.USD.rate_float);
+            prices.gbp = this.roundAndFormatRate(parsed.bpi.GBP.rate_float);
 
             callback(prices);
         });
@@ -28,4 +23,9 @@ exports.getCurrentPrice = function(callback){
     .on('error', (err) => {
         console.log("Error: " + err.message);
     });
+}
+
+
+exports.roundAndFormatRate = function(rate){
+    return rate.toFixed(2);
 }
