@@ -1,6 +1,5 @@
 var Alexa = require('alexa-sdk');
 var data = require('./data.js');
-
 const skillName = "Bitcoin Price";
 
 var handlers = {
@@ -34,7 +33,7 @@ var handlers = {
 exports.handler = function(event, context){
     var alexa = Alexa.handler(event, context);
     alexa.appId = "amzn1.ask.skill.e4ee2508-f2b3-400b-96bc-1deb6ccce518";
-    alexa.appId = 'amzn1.echo-sdk-ams.app.000000-d0ed-0000-ad00-000000d00ebe';
+    //alexa.appId = 'amzn1.echo-sdk-ams.app.000000-d0ed-0000-ad00-000000d00ebe';
     alexa.registerHandlers(handlers);
     alexa.execute();
 }
